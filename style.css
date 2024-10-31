@@ -201,27 +201,38 @@ button:active::after {
 }
 
 /* Media Queries for Mobile */
-@media (max-width: 600px) {
-  body {
-    font-size: 8px;
-  }
-
-  .container, .container1, .next-page-container, .video-container {
-    width: 90%;
-    padding: 15px;
-    margin: 10px auto;
+@media screen and (max-width: 360px) and (max-height: 761px) {
+  .container, .container1, .next-page-container {
+    padding: 10px; /* Reduce padding for very small screens */
+    max-width: 100%; /* Allow containers to take full width */
   }
 
   .container h1, .container1 h1, .next-page-container h2 {
-    font-size: 1.5em;
+    font-size: 1.5em; /* Further reduce font size for headings */
+    text-align: center; /* Center align headings for better appearance */
   }
 
   .container p, .container1 p, .next-page-container p {
-    font-size: 1em;
+    font-size: 0.9em; /* Reduce font size for paragraphs */
+    line-height: 1.4; /* Adjust line height for better readability */
   }
 
   button {
-    padding: 10px 20px;
+    padding: 8px 16px; /* Adjust button padding */
+    font-size: 0.9em; /* Reduce button font size */
+    width: 100%; /* Make buttons full width */
+    margin-top: 10px; /* Add margin between buttons */
+  }
+
+  .Video-Container {
+    margin: 20px 0; /* Adjust margin for video container */
+  }
+
+  #myVideo {
+    width: 100%; /* Make video responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
     font-size: 1em;
   }
 }
