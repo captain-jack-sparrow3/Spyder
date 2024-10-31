@@ -176,14 +176,16 @@ button:active::after {
 }
 /* Video Container Styles */
 .Video-Container {
-  width: 100%; /* Full width of the parent */
-  max-width: 350px; /* Maximum width for larger screens */
-  margin: 100px ;/* Center the container with margin*/
   padding: 10px; /* Padding around the video */
   background-color: rgba(197, 22, 22, 0.9); /* Slightly transparent white background */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-  overflow: hidden; /* Prevent overflow */
+  overflow: hidden;
+    width: 90%; /* Adjusts width to 90% of the screen */
+    max-width: 640px; /* Sets a maximum width */
+    margin: auto; /* Centers container */
+}
+/* Prevent overflow */
 }
 
 /* Video Element Styles */
@@ -218,4 +220,14 @@ video::-webkit-media-controls {
 .container1 p {
   font-size: 1.2em;
   margin-bottom: 20px;
+}
+@media (max-width: 600px) {
+    body {
+        font-size: 16px; /* Adjust font size for mobile */
+    }
+}
+@media (max-width: 600px) {
+    .video-container video {
+        width: 100%; /* Makes video full-width on small screens */
+    }
 }
