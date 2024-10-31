@@ -1,3 +1,4 @@
+/* General Reset and Styling */
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +16,7 @@ body {
   background-color: #333;
 }
 
+/* Background Video Styling */
 .background-video {
   position: fixed;
   top: 0;
@@ -34,7 +36,8 @@ body {
   gap: 20px; /* Space between main container and next-page-container */
 }
 
-.container {
+/* Container Styling */
+.container, .container1 {
   text-align: center;
   color: #fff;
   max-width: 500px;
@@ -45,16 +48,17 @@ body {
   z-index: 1;
 }
 
-.container h1 {
+.container h1, .container1 h1 {
   font-size: 2em;
   margin-bottom: 10px;
 }
 
-.container p {
+.container p, .container1 p {
   font-size: 1.1em;
   margin-bottom: 20px;
 }
 
+/* Button Styling */
 button {
   padding: 12px 25px;
   font-size: 1.1em;
@@ -75,6 +79,7 @@ button:hover {
   transform: translateY(-3px);
   box-shadow: 0px 6px 15px rgba(255, 126, 95, 0.4);
 }
+
 button::after {
   content: '';
   position: absolute;
@@ -87,22 +92,23 @@ button::after {
   border-radius: 50%;
   transition: 0.6s ease;
 }
+
 button:active::after {
   transform: translate(-50%, -50%) scale(1);
   opacity: 0;
 }
 
-
-/* Styles for the Next Page Section */
+/* Next Page Section Styling */
 .next-page-container {
-  text-align: center; /* Center text inside the container */
-  margin: 50px; /* Margin for spacing */
-  padding: 100px; /* Padding for the container */
-  background-color: rgba(184, 37, 37, 0.9); /* Slightly transparent white background */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-  z-index:10;
+  text-align: center;
+  margin: 50px;
+  padding: 100px;
+  background-color: rgba(184, 37, 37, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  z-index: 10;
 }
+
 .next-page-container h2 {
   font-size: 1.5em;
   color: #FFCC33;
@@ -130,10 +136,10 @@ button:active::after {
   color: #333;
   background: linear-gradient(135deg, #33CC99, #66CCFF);
 }
+
 /* Name Input Form Styling */
 .name-form {
   text-align: center;
-  margin-top: 20px;
   padding: 20px;
   background: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
@@ -174,60 +180,49 @@ button:active::after {
   background-color: #FFCC33;
   color: #333;
 }
+
 /* Video Container Styles */
-.Video-Container {
-  padding: 10px; /* Padding around the video */
-  background-color: rgba(197, 22, 22, 0.9); /* Slightly transparent white background */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+.video-container {
+  padding: 10px;
+  background-color: rgba(197, 22, 22, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-    width: 90%; /* Adjusts width to 90% of the screen */
-    max-width: 640px; /* Sets a maximum width */
-    margin: auto; /* Centers container */
-}
-/* Prevent overflow */
+  width: 90%;
+  max-width: 640px;
+  margin: auto;
 }
 
 /* Video Element Styles */
 #myVideo {
-  width: 100%; /* Make the video responsive */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 10px; /* Match corners with the container */
-}
-
-/* Optional: Adding some styles for the video controls */
-video::-webkit-media-controls {
-  /* background-color: rgba(213, 53, 53, 0.8); Control bar background */
-  border-radius: 10px; /* Rounded corners for controls */
-}
-
-.container1 {
-  text-align: center;
-  color: #fff;
-  max-width: 500px;
-  padding: 20px;
-  background: rgba(57, 11, 11, 0.6);
+  width: 100%;
+  height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  z-index: 1;
 }
 
-.container1 h1 {
-  font-size: 2.5em;
-  margin-bottom: 15px;
+/* Media Queries for Mobile */
+@media (max-width: 600px) {
+  body {
+    font-size: 8px;
+  }
+
+  .container, .container1, .next-page-container, .video-container {
+    width: 90%;
+    padding: 15px;
+    margin: 10px auto;
+  }
+
+  .container h1, .container1 h1, .next-page-container h2 {
+    font-size: 1.5em;
+  }
+
+  .container p, .container1 p, .next-page-container p {
+    font-size: 1em;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
 }
 
-.container1 p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-}
-@media (max-width: 600px) {
-    body {
-        font-size: 8px; /* Adjust font size for mobile */
-    }
-}
-@media (max-width: 600px) {
-    .video-container video {
-        width: 100%; /* Makes video full-width on small screens */
-    }
-}
